@@ -1,0 +1,26 @@
+
+[project]
+name = "translate"
+version = "1.0"
+description = "hah"
+authors = [
+    {name = "lizqwerscott", email = "lizqwerscott@163.com"},
+]
+dependencies = [
+    "googletrans==4.0.0rc1",
+]
+requires-python = ">=3.6"
+license = {text = "MIT"}
+
+[tool.pdm.scripts]
+start = "python src/main.py"
+
+[tool.pyright]
+include = ["src"]
+exclude = ["**/node_modules",
+    "**/__pycache__",
+    "src/experimental",
+    "src/typestubs"
+]
+extraPaths = ["__pypackages__/3.11/lib/"]
+stubPath = "stubs"
