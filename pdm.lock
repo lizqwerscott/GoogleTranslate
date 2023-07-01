@@ -153,6 +153,7 @@ requires_python = ">=3.7"
 summary = "The little ASGI library that shines."
 dependencies = [
     "anyio<5,>=3.4.0",
+    "typing-extensions>=3.10.0; python_version < \"3.10\"",
 ]
 
 [[package]]
@@ -175,7 +176,7 @@ dependencies = [
 lock_version = "4.2"
 cross_platform = true
 groups = ["default"]
-content_hash = "sha256:d43403d22b13a1590b97a12186b401b35faa0da81ac0c250e8261be9d8057599"
+content_hash = "sha256:9d54df5dee45bdcabda218565cc408c2f88a9ade9e49596eee7056b1c459397f"
 
 [metadata.files]
 "anyio 3.7.0" = [
