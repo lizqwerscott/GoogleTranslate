@@ -2,6 +2,8 @@ from googletrans import Translator
 
 def translate(data, dest):
     R_dict = dict()
+    R_dict["code"] = 200
+    R_dict["msg"] = "翻译正常"
     try:
         translator = Translator(service_urls=[
             'translate.google.com',
@@ -12,8 +14,5 @@ def translate(data, dest):
     except RuntimeError:
         R_dict["code"] = 444
         R_dict["msg"] = "翻译错误！！"
-    finally:
-        R_dict["code"] = 200
-        R_dict["msg"] = "翻译正常"
 
     return R_dict
